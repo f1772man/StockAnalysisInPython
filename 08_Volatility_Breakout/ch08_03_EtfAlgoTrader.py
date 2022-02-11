@@ -118,6 +118,7 @@ def get_current_cash():
     accFlag = cpTradeUtil.GoodsList(acc, 1) # -1:전체, 1:주식, 2:선물/옵션
     cpCash.SetInputValue(0, acc)              # 계좌번호
     cpCash.SetInputValue(1, accFlag[0])      # 상품구분 - 주식 상품 중 첫번째
+    cpCash.SetinputValue(5, 'Y')                # 미수발생증거금100 퍼센트 징수여부코드
     cpCash.BlockRequest() 
     return cpCash.GetHeaderValue(9) # 증거금 100% 주문 가능 금액
 
